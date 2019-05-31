@@ -8,12 +8,12 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/openaccounting/oa-server/core/api"
-	"github.com/openaccounting/oa-server/core/auth"
-	"github.com/openaccounting/oa-server/core/model"
-	"github.com/openaccounting/oa-server/core/model/db"
-	"github.com/openaccounting/oa-server/core/model/types"
-	"github.com/openaccounting/oa-server/core/util"
+	"github.com/geogramdotcom/oa-server/core/api"
+	"github.com/geogramdotcom/oa-server/core/auth"
+	"github.com/geogramdotcom/oa-server/core/model"
+	"github.com/geogramdotcom/oa-server/core/model/db"
+	"github.com/geogramdotcom/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/util"
 )
 
 func main() {
@@ -32,7 +32,16 @@ func main() {
 		log.Fatal(fmt.Errorf("failed to decode ./config.json with: %s", err.Error()))
 	}
 
-	connectionString := config.User + ":" + config.Password + "@" + config.DatabaseAddress + "/" + config.Database
+	// connectionString := fmt.Sprintf("%s:%s@tcp(%s)/%s",
+	// 	config.User,
+	// 	config.Password,
+	// 	config.DatabaseAddress,
+	// 	config.Database)
+	fmt.Printf("%s:%s@tcp([%s])/%s", config.User, config.Password, config.DatabaseAddress, config.Database)
+	fmt.Println("\n...")
+	connectionString := fmt.Sprintf("%s:%s@tcp(%s)/%s", config.User, config.Password, config.DatabaseAddress, config.Database)
+
+	// config.User + ":" + config.Password + "@" + config.DatabaseAddress + "/" + config.Database
 
 	db, err := db.NewDB(connectionString)
 	if err != nil {

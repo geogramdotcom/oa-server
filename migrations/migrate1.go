@@ -2,8 +2,8 @@ package main
 
 import (
   "encoding/json"
-  "github.com/openaccounting/oa-server/core/model/db"
-  "github.com/openaccounting/oa-server/core/model/types"
+  "github.com/geogramdotcom/oa-server/core/model/db"
+  "github.com/geogramdotcom/oa-server/core/model/types"
   "log"
   "os"
 )

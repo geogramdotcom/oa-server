@@ -97,3 +97,4 @@ config.json
 *.csr
 *.sublime-project
 *.sublime-workspace
+cloud_sql_proxy

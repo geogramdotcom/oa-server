@@ -2,6 +2,9 @@ package db
 
 import (
 	"database/sql"
+	"fmt"
+	"runtime/debug"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -22,13 +25,24 @@ type Datastore interface {
 }
 
 func NewDB(dataSourceName string) (*DB, error) {
+	fmt.Println("starting NewDB Func in db.go")
+
 	var err error
 	db, err := sql.Open("mysql", dataSourceName)
+
 	if err != nil {
+		debug.PrintStack()
 		return nil, err
 	}
+	// fmt.Println("No errors; trying SetConnMaxLifetime")
+	// db.SetConnMaxLifetime(time.Second * 5)
+	// fmt.Println("No errors; trying SetMaxIdleConns")
+	// db.SetMaxIdleConns(0)
+	// fmt.Println("No errors; trying SetMaxOpenConns")
+	// db.SetMaxOpenConns(151)
 
 	if err = db.Ping(); err != nil {
+		fmt.Println("try ping")
 		return nil, err
 	}
 

@@ -3,8 +3,8 @@ package db
 import (
 	"database/sql"
 	"errors"
-	"github.com/openaccounting/oa-server/core/model/types"
-	"github.com/openaccounting/oa-server/core/util"
+	"github.com/geogramdotcom/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/util"
 	"math"
 	"strings"
 	"time"

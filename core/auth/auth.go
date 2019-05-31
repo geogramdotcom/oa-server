@@ -2,9 +2,9 @@ package auth
 
 import (
 	"errors"
-	"github.com/openaccounting/oa-server/core/model/db"
-	"github.com/openaccounting/oa-server/core/model/types"
-	"github.com/openaccounting/oa-server/core/util"
+	"github.com/geogramdotcom/oa-server/core/model/db"
+	"github.com/geogramdotcom/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/util"
 )
 
 var Instance Interface

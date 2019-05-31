@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/ant0ine/go-json-rest/rest"
-	"github.com/openaccounting/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/model/types"
 	"log"
 	"net"
 	"os"

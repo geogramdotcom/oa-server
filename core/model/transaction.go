@@ -3,8 +3,8 @@ package model
 import (
 	"errors"
 	"fmt"
-	"github.com/openaccounting/oa-server/core/model/types"
-	"github.com/openaccounting/oa-server/core/ws"
+	"github.com/geogramdotcom/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/ws"
 	"time"
 )
 

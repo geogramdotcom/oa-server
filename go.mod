@@ -1,4 +1,4 @@
-module github.com/openaccounting/oa-server
+module github.com/geogramdotcom/oa-server
 
 require (
 	github.com/Masterminds/semver v0.0.0-20180807142431-c84ddcca87bf

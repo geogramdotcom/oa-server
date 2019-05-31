@@ -2,9 +2,9 @@ package model
 
 import (
 	"errors"
-	"github.com/openaccounting/oa-server/core/mocks"
-	"github.com/openaccounting/oa-server/core/model/db"
-	"github.com/openaccounting/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/mocks"
+	"github.com/geogramdotcom/oa-server/core/model/db"
+	"github.com/geogramdotcom/oa-server/core/model/types"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"

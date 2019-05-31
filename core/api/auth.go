@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"errors"
 	"github.com/ant0ine/go-json-rest/rest"
-	"github.com/openaccounting/oa-server/core/auth"
+	"github.com/geogramdotcom/oa-server/core/auth"
 	"log"
 	"net/http"
 	"strings"

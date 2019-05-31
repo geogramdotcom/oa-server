@@ -2,7 +2,7 @@ package model
 
 import (
 	"errors"
-	"github.com/openaccounting/oa-server/core/model/types"
+	"github.com/geogramdotcom/oa-server/core/model/types"
 )
 
 type SessionInterface interface {
